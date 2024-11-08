@@ -1,0 +1,67 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* 배경 이미지로 설정 */
+}
+
+.header {
+    height: 30vh;
+    position: relative;
+    text-align: center;
+    padding: 30px;
+    text-align: left;
+    font-size: 30px;
+}
+
+.image-text {
+    font-weight: bold;
+    background-image: url('../image/backimg.jpg'); /* 텍스트에 채울 이미지 경로 */
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.nav {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: default;
+}
+
+.header h2 {
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 100;
+    text-align: justify;
+    color: white;
+    z-index: 1;
+}
+
+.nav h4 {
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 80;
+    text-align: justify;
+    color: white;
+    z-index: 3;
+}
+
+.li {
+    line-height: 50%;
+}
