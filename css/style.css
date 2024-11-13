@@ -1,67 +1,332 @@
-@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-
-* {
-    box-sizing: border-box;
+*{
+    font-family: "GmarketMedium";
+}
+body{
+    padding-top: 150px;
+    background-color: #eff2f8;
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
-body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    position: absolute;
+/* header */
+#header{
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: -1; /* 배경 이미지로 설정 */
+    right: 0;
+    padding: 45px 60px;
+    background-color: white;
+    color: #6a75ca;
+    font-size: 18px;
+    /* border-bottom: 1px solid #e0e3fd; */
+    z-index: 10;
 }
-
-.header {
-    height: 30vh;
-    position: relative;
-    text-align: center;
-    padding: 30px;
-    text-align: left;
-    font-size: 30px;
-}
-
-.image-text {
-    font-weight: bold;
-    background-image: url('../image/backimg.jpg'); /* 텍스트에 채울 이미지 경로 */
-    background-size: cover;
-    background-position: center;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.nav {
-    height: 60vh;
+.nav-list{
     display: flex;
+    justify-content: right;
+}
+.list-link{
+    margin-left: 70px;
+}
+.list-link:hover{
+    color: black;
+    border-bottom: 2px solid black;
+}
+#btn-code{
+    padding: 8px 27px;
+    border-radius: 20px;
+    text-decoration-line: none;
+    background-color: #6a75ca;
+    border: 2px solid #6a75ca;
+    color: white;
+}
+#btn-code:hover{
+    background-color: white;
+    border: 2px solid #6a75ca;
+    color: #6a75ca;
+    transition: 0.2s ease-out;
+}
+
+/* header bottom */
+.bar-bg{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #dfe2f7;
+}
+.bar-ing{
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #6a75ca;
+}
+
+/* intro */
+.cont-intro{
+    margin: 250px 0 350px 0;
+    display: flex;
+    justify-content: center;
+}
+.cont-intro img{
+    width: 230px;
+    margin-right: 40px;
+}
+.txt-title{
+    width: 620px;
+    margin-top: 30px;
+    font-size: 55px;
+    font-family: "GmarketBold";
+    color: #6a75ca;
+    line-height: 58px;
+}
+.btn-more{
+    position: absolute;
+    bottom: 36%;
+    padding: 8px 27px;
+    border-radius: 20px;
+    background-color: #6a75ca;
+    border: 2px solid #6a75ca;
+    color: white;
+    font-size: 18px;
+    margin-top: 40px;
+}
+.btn-more:hover{
+    background-color: white;
+    border: 2px solid #6a75ca;
+    color: #6a75ca;
+    transition: 0.5s ease-out;
+}
+
+/* about */
+.section-about{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: default;
+    background-color: white;
+    padding: 80px 0 140px 0;
+    margin: 0 0 140px 0;
 }
-
-.header h2 {
-    font-family: 'Jeju Gothic', sans-serif;
-    font-size: 100;
-    text-align: justify;
+.section-about h2{
+    margin: 0 auto 100px;
+    display: inline-block;
+    font-family: "GmarketBold";
+    color: #6a75ca;
+    font-size: 40px;
+}
+.cont-about{
+    display: flex;
+    margin: 0 auto;
+}
+.slide-container{
+    width: 438px;
+    margin: 0 auto;
+}
+.slide-album{
+    position: relative;
+    width: 438px;
+    height: 438px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.slide-image{
+    position: relative;
+    display: flex;
+    height: 438px;
+}
+.slide-image img{
+    width: 438px;
+    height: 438px;
+}
+.btn-right,
+.btn-right:active,
+.btn-right:focus
+{
+    position: absolute;
+    padding: 8px 8px 7px 14px;
+    background-color: #6a75ca;
     color: white;
-    z-index: 1;
+    border: none;
+    font-size: 18px;
+    border-radius: 100%;
 }
-
-.nav h4 {
-    font-family: 'Jeju Gothic', sans-serif;
-    font-size: 80;
-    text-align: justify;
+.btn-left,
+.btn-left:active,
+.btn-left:focus
+{
+    position: absolute;
+    padding: 8px 14px 7px 8px;
+    background-color: #6a75ca;
     color: white;
-    z-index: 3;
+    border: none;
+    font-size: 18px;
+    border-radius: 100%;
+}
+.btn-right:disabled,
+.btn-left:disabled{
+    background-color: lightgray;
+}
+.btn-right:hover,
+.btn-left:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #6a75ca;
+    transition: 0.5s ease-out;
+}
+.btn-right{
+    right: 18px;
+    top: 50%;
+}
+.btn-left{
+    left: 18px;
+    top: 50%;
+}
+.info-about{
+    margin: 0 0 0 60px;
+}
+.txt-about dt{
+    display: inline-block;
+    margin-bottom: 17px;
+    width: 110px;
+    font-size: 22px;
+    font-family: "GmarketBold";
+    color: #6a75ca;
+}
+.txt-about{
+    margin-top: 55px;
+}
+.txt-about dd{
+    display: inline-block;
+    font-size: 22px;
+}
+.btn-about{
+    margin: 45px 0 0 20px;
+}
+.btn-about button{
+    width: 140px;
+    height: 140px;
+    margin: 0 45px 0 0;
+    border-radius: 100%;
+    background-color: #6a75ca;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+.btn-about button:hover{
+    cursor: pointer;
+    background-color: #c4c8f1;
+    color: #868ecf;
+    border: 2px solid #6a75ca;
+    transition: 0.5s ease-out;
+}
+.btn-about button img{
+    width: 43px;
+    margin: 10px auto;
 }
 
-.li {
-    line-height: 50%;
+/* project */
+.section-project{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 180px;
+}
+.section-project h2{
+    margin: 0 auto 100px;
+    display: inline-block;
+    font-family: "GmarketBold";
+    color: #6a75ca;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.box-project{
+    margin: 30px auto;
+    display: flex;
+    padding: 35px;
+    width: 1000px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.img-project{
+    border-radius: 15px;
+    width: 452px;
+    margin-bottom: 25px;
+}
+.btn-detail{
+    cursor: pointer;
+    padding: 10px 172px;
+    border-radius: 15px;
+    border: none;
+    background-color: #6a75ca;
+    border: 2px solid #6a75ca;
+    color: white;
+    font-size: 20px;
+}
+.btn-detail:hover{
+    background-color: white;
+    border: 2px solid #6a75ca;
+    color: #6a75ca;
+}
+.txt-project{
+    text-align: left;
+    margin: 25px 0 0 40px;
+}
+.txt-project h3{
+    font-family: "GmarketBold";
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+.txt-project dl dt {
+    font-family: "GmarketBold";
+    font-size: 22px;
+    margin-bottom: 6px;
+    color: #6a75ca;
+}
+.txt-project dl dd{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* footer */
+#footer{
+    text-align: center;
+}
+#footer h2{
+    font-family: "GmarketBold";
+    color: #6a75ca;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.box-footer{
+    width: 100%;
+    background-color: white;
+    padding: 80px 0 70px 0;
+}
+.link-sns ul{
+    display: inline-block;
+    margin: 30px auto;
+}
+.link-sns li{
+    display: inline-block;
+    padding: 35px;
+    font-size: 12px;
+}
+.link-sns li a img{
+    margin-bottom: 10px;
+}
+.link-sns li a{
+    display: inline-block;
+}
+.img-github,
+.img-velog{
+    width: 65px;
+}
+.box-footer p{
+    color: #6a75ca;
+    margin-top: 50px;
 }

@@ -4,21 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>My Web Page</title>
 </head>
 <body>
-    <img src="image/backimg.jpg" alt="none">
-    <div class="header">
-        <h2 class="image-text">Welcome My Web Page</h2>
-        <h4 class="image-text">My name's Jang Hyeong Jun</h4>
-    </div>
+    <main id="app">
+        <section class="section-intro">
+            <header id="header">
+                <h1 class="txt-invisible">Portfolio</h1>
+                <nav>
+                    <ul class="nav-list">
+                        <li class="list-link">About Me</li>
+                        <li class="list-link">Project</li>
+                        <li class="list-link">Contact</li>
+                        <li><a href="https://github.com/janghjun" class="list-link" id="btn-code">Github</a></li>
+                    </ul>
+                </nav>
+                <div class="bar-bg">
+                    <span class="bar-ing"></span>
+                </div>
+            </header>
 
-    <div class="nav">
-        <ul>
-            <li><h4>About me</h4></li>
-            <li><h4>Link</h4></li>
-            <li><h4>Section</h4></li>
-        </ul>
-    </div>
+            <div class="cont-intro">
+                <a name="info"></a>
+                <img src="image/#" alt="프로필 이미지"/>
+                <div>
+                    <p class="txt-title"></p>
+                    <a href="#about" class="btn-more">More</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-about">
+            <a name="about"></a>
+            <h2>About.</h2>
+            <div class="cont-about">
+                <div class="slide-container">
+                    <div class="slide-album">
+                        <div class="slide-image">
+                            <img src="image/#" alt="나의 대표 이미지"/>
+                            <img src="image/img-main-painting.JPG" alt="대표 그림"/>
+                            <img src="image/img-main-picture.JPG" alt="대표 사진"/>
+                        </div>
+                        <button class="btn-right">▶</button>
+                        <button class="btn-left">◀</button>
+                    </div>
+                </div>
+                <div class="info-about">
+                    <div class="txt-about">
+                        <dl>
+                            <dt>이름</dt>
+                            <dd>장형준</dd>
+                        </dl>
+                        <dl>
+                            <dt>생년월일</dt>
+                            <dd>2001.08.04</dd>
+                        </dl>
+                        <dl>
+                            <dt>거주지</dt>
+                            <dd>인천광역시 연수구</dd>
+                        </dl>
+                        <dl>
+                            <dt>학교/전공</dt>
+                            <dd>상명대학교/스마트정보통신학과</dd>
+                        </dl>
+                    </div>
+                    <div class="btn-about">
+                        <button class="btn-open" type="button">
+                            <span class="material-symbols-outlined">star</span>
+                            취미
+                        </button>
+                        <button class="btn-open" type="button">
+                            <span class="material-symbols-outlined">favorite</span>
+                            성격
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-project">
+            <a name="project"></a>
+            <h2>Project.</h2>
+            <article class="box-project">
+                <div>
+                    <img
+                    class="img-project"
+                    src="image/img-bookmarket.png" alt="북마켓 대표 이미지"/>
+                    <button
+                    class="btn-detail"
+                    type="button"
+                    onclick="location.href='https://github.com/janghjun/bookmarket/';">
+                        자세히 보기
+                    </button>
+                </div>
+                <div class="txt-project">
+                    <h3>BookMarket</h3>
+                    <dl>
+                        <dt>기간</dt>
+                        <dd>OOOO.OO</dd>
+                        <dt>설명</dt>
+                        <dd>PHP 활용 책 소개 페이지</dd>
+                        <dt>사용 기술</dt>
+                        <dd>PHP</dd>
+                    </dl>
+                </div>
+            </article>
+        </section>
+
+        <footer id="footer">
+            <a name="contact"></a>
+            <div class="box-footer">
+                <h2>Contact.</h2>
+                <ul class="link-sns">
+                    <li>
+                        <a href="https://github.com/janghjun">
+                            <img class="img-github" src="image/icon-github.png" alt="깃허브"/>
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-velog" src="image/icon-velog.png" alt="블로그"/>
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+                <p> @2024 - HyeongJun</p>
+            </div>
+        </footer>
+        <button onclick="moveToTop()" class="btn-moveTop"></button>
+        <script src="js/index.js"></script>
+    </main>
 </body>
 </html>
